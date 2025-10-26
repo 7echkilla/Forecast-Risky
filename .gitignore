@@ -1,2 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
 .venv/
-__pycache__
+venv/
+env/
+
+# Configuration/Cache
+*.log
+*.pyproj
+*.vscode/
+.pytest_cache/
+
+# Jupyter/Data
+.ipynb_checkpoints
+*.csv
+*.xlsx
+
+# OS/Editor
+.DS_Store
+Thumbs.db
