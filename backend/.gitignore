@@ -22,3 +22,6 @@ env/
 # OS/Editor
 .DS_Store
 Thumbs.db
+
+# Project specific
+config.env

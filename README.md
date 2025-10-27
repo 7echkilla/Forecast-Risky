@@ -5,12 +5,26 @@ Weather software for [2025 NASA Space Apps Challenge](https://www.spaceappschall
 ## Repository Structure
 Forecast-Risky/\
 │\
-├── src/\
-│   ├── __init__.py\
-│   ├── api.py          # get weather data\
-│   ├── location.py     # location detection (IP lookup)\
-│   └── utils.py        # helper functions\
+├── backend/\
+│   ├── src/\
+│   │   ├── __init__.py\
+│   │   └── utils.py\
+│   ├── config.env          # API key\
+│   └── main.py             # entry point\
+│   └── requirements.txt    # python packages\
 │\
-└── main.py             # entry point
+├── frontend/\
+│   ├── src/\
+│   │   ├── components/\
+│   │   │   └── WeatherCard.jsx\
+│   │   └── App.jsx\
+│   ├── index.html          # API key\
+│   └── package.json             # entry point\
+│   └── vite.config.js   # python dependencies\
+│\
+├── .gitignore\
+├── LICENSE\
+└── README.md
 
-cli: streamlit run main.py
+## Useage
+- Backend: uvicorn main:app --reload
