@@ -1,6 +1,7 @@
 import os
 import requests
 
+from dotenv import load_dotenv
 from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -19,7 +20,12 @@ app.add_middleware(
 
 @app.get("/api/weather")
 def get_weather(city:str=Query(..., description="City name")):
+
+    load_dotenv("config.env")
     api_key = os.getenv("OPENWEATHER_API_KEY")
+    if not api_key:
+        raise EnvironmentError(print_message("fail", "No valid API key"))
+
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
     response = requests.get(url)
