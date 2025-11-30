@@ -27,4 +27,11 @@ Forecast-Risky/\
 └── README.md
 
 ## Useage
-- Backend: uvicorn main:app --reload
+- Backend: `uvicorn main:app --reload`
+  - Install virtual environment: `python3 -m venv .venv`
+  - Load dependencies: `pip install -r requirements.txt`
+  - Grab API Key (free) from [OpenWeather](https://openweathermap.org/price)
+    ```bash
+    # config.env
+    OPENWEATHER_API_KEY=YOUR_API_KEY_HERE
+    ```
